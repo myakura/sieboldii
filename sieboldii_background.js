@@ -23,8 +23,12 @@ async function closeTab(tabId) {
 
 async function selectNextTab() {
 	const currentTab = await _getCurrentTab();
-	const nextTabIndex = currentTab.index + 1;
-	await _selectTabByTabIndex(nextTabIndex);
+	await _selectTabByTabIndex(currentTab.index + 1);
+}
+
+async function selectPreviousTab() {
+	const currentTab = await _getCurrentTab();
+	await _selectTabByTabIndex(currentTab.index - 1);
 }
 
 const actions = {
@@ -35,6 +39,10 @@ const actions = {
 	selectNextTab: {
 		label: 'Select next tab',
 		action: selectNextTab,
+	},
+	selectPreviousTab: {
+		label: 'Select previous tab',
+		action: selectPreviousTab,
 	},
 };
 

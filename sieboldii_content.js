@@ -34,6 +34,7 @@ async function handleToolbarClick(event) {
 
 function createUi() {
 	const specs = [
+		{ actionName: 'selectPreviousTab', label: 'Select previous tab' },
 		{ actionName: 'closeTab', label: 'Close tab' },
 		{ actionName: 'selectNextTab', label: 'Select next tab' },
 	];
