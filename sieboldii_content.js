@@ -33,7 +33,10 @@ async function handleToolbarClick(event) {
 }
 
 function createUi() {
-	const specs = [{ actionName: 'closeTab', label: 'Close tab' }];
+	const specs = [
+		{ actionName: 'closeTab', label: 'Close tab' },
+		{ actionName: 'selectNextTab', label: 'Select next tab' },
+	];
 	const buttons = specs.map(({ actionName, label }) =>
 		createButton({ actionName, label }),
 	);
