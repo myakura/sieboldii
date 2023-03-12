@@ -41,10 +41,10 @@ function createUi() {
 	const buttons = specs.map(({ actionName, label }) =>
 		createButton({ actionName, label }),
 	);
-	const toolBar = createToolbar();
-	toolBar.append(...buttons);
+	const toolbar = createToolbar();
+	toolbar.append(...buttons);
 
-	document.body.append(toolBar);
+	document.body.append(toolbar);
 }
 
 (function main() {
