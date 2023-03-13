@@ -2,8 +2,8 @@ body {
 	position: relative;
 
 	--__color-text: var(--gray-8);
-	--__color-button: var(--gray-2);
-	--__color-button-border: var(--gray-3);
+	--__color-button: var(--gray-4);
+	--__color-button-border: var(--gray-5);
 }
 
 .SieboldiiToolbar {
@@ -45,14 +45,14 @@ body {
 }
 
 .SieboldiiToolbar button:hover {
-	--__color-button: var(--gray-1);
-	--__color-button-border: var(--gray-3);
+	--__color-button: var(--gray-3);
+	--__color-button-border: var(--gray-5);
 }
 
 @media screen and (prefers-color-scheme: dark) {
 	body {
 		--__color-text: var(--gray-5);
-		--__color-button: var(--gray-11);
+		--__color-button: var(--gray-10);
 		--__color-button-border: var(--gray-8);
 	}
 }
