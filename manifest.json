@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "Sieboldii",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"author": "Masataka Yakura",
 	"permissions": ["tabs", "contextMenus"],
 	"background": {

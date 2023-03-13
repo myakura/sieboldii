@@ -34,9 +34,9 @@ async function handleToolbarClick(event) {
 
 function createUi() {
 	const specs = [
-		{ actionName: 'selectPreviousTab', label: 'Select previous tab' },
+		{ actionName: 'selectPreviousTab', label: 'Prev tab' },
 		{ actionName: 'closeTab', label: 'Close tab' },
-		{ actionName: 'selectNextTab', label: 'Select next tab' },
+		{ actionName: 'selectNextTab', label: 'Next tab' },
 	];
 	const buttons = specs.map(({ actionName, label }) =>
 		createButton({ actionName, label }),
