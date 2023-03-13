@@ -1,0 +1,26 @@
+body {
+	position: relative;
+}
+
+.SieboldiiToolbar {
+	position: fixed;
+	top: 40px;
+	z-index: 1;
+
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+
+	opacity: 30%;
+	transition: 200ms ease-out opacity;
+	will-change: opacity;
+}
+
+.SieboldiiToolbar:hover {
+	opacity: 100%;
+}
+
+.SieboldiiToolbar button {
+	padding-block: 0.3em;
+}

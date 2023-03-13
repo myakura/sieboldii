@@ -7,43 +7,9 @@ function createButton({ actionName, label }) {
 	return button;
 }
 
-function addToolbarStyle() {
-	const styleSheet = `
-	body {
-		position: relative;
-	}
-	.SieboldiiToolbar {
-		position: fixed;
-		top: 40px;
-		z-index: 1;
-
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		gap: 8px;
-
-		opacity: 30%;
-		transition: 200ms ease-out opacity;
-		will-change: opacity;
-	}
-	.SieboldiiToolbar:hover {
-		opacity: 100%
-	}
-	.SieboldiiToolbar button {
-		padding-block: 0.3em;
-	}
-	`;
-	const styleElement = document.createElement('style');
-	styleElement.classList.add('.SieboldiiStyle');
-	styleElement.textContent = styleSheet;
-	document.head.append(styleElement);
-}
-
 function createToolbar() {
 	const div = document.createElement('div');
 	div.classList.add('SieboldiiToolbar');
-
-	addToolbarStyle();
 
 	div.addEventListener('click', async (event) => {
 		await handleToolbarClick(event);
