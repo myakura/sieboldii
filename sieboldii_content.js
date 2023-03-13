@@ -14,7 +14,7 @@ function addToolbarStyle() {
 	}
 	.SieboldiiToolbar {
 		position: fixed;
-		top: 50px;
+		top: 40px;
 		z-index: 1;
 
 		width: 100%;
@@ -22,13 +22,15 @@ function addToolbarStyle() {
 		justify-content: center;
 		gap: 8px;
 
-		opacity: 50%;
+		opacity: 30%;
+		transition: 200ms ease-out opacity;
+		will-change: opacity;
 	}
 	.SieboldiiToolbar:hover {
 		opacity: 100%
 	}
 	.SieboldiiToolbar button {
-		padding-block: 0.5em;
+		padding-block: 0.3em;
 	}
 	`;
 	const styleElement = document.createElement('style');
