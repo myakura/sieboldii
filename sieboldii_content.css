@@ -1,19 +1,26 @@
 body {
 	position: relative;
+
+	--__color-text: var(--gray-8);
+	--__color-button: var(--gray-2);
+	--__color-button-border: var(--gray-3);
 }
 
 .SieboldiiToolbar {
 	position: fixed;
-	top: 40px;
-	z-index: 1;
+	top: var(--size-8);
+	z-index: var(--layer-important);
 
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	gap: 8px;
+	gap: var(--size-2);
 
 	opacity: 30%;
-	transition: 200ms ease-out opacity;
+
+	transition-duration: 200ms;
+	transition-timing-function: ease-out;
+	transition-property: opacity;
 	will-change: opacity;
 }
 
@@ -22,5 +29,30 @@ body {
 }
 
 .SieboldiiToolbar button {
-	padding-block: 0.3em;
+	padding: var(--size-2) var(--size-3);
+	border-style: solid;
+	border-width: var(--border-size-1);
+	border-radius: var(--radius-4);
+
+	color: var(--__color-text);
+	background-color: var(--__color-button);
+	border-color: var(--__color-button-border);
+
+	transition-duration: 200ms;
+	transition-timing-function: ease-out;
+	transition-property: color, background-color, border-color;
+	will-change: color, background-color, border-color;
+}
+
+.SieboldiiToolbar button:hover {
+	--__color-button: var(--gray-1);
+	--__color-button-border: var(--gray-3);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	body {
+		--__color-text: var(--gray-5);
+		--__color-button: var(--gray-11);
+		--__color-button-border: var(--gray-8);
+	}
 }
