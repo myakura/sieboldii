@@ -56,3 +56,13 @@ chrome.runtime.onMessage.addListener(async (request, sender) => {
 
 	await action(tabId);
 });
+
+chrome.action.onClicked.addListener(async () => {
+	const tab = await _getCurrentTab();
+
+	const message = {
+		type: `sieboldii-browser-action`,
+	};
+
+	await chrome.tabs.sendMessage(tab.id, message);
+});

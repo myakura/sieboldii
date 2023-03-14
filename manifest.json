@@ -1,13 +1,14 @@
 {
 	"manifest_version": 3,
 	"name": "Sieboldii",
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"author": "Masataka Yakura",
 	"permissions": ["tabs", "contextMenus"],
 	"background": {
 		"service_worker": "sieboldii_background.js",
 		"type": "module"
 	},
+	"action": {},
 	"content_scripts": [
 		{
 			"matches": ["<all_urls>"],

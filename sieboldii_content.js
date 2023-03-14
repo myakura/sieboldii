@@ -47,6 +47,17 @@ function createUi() {
 	document.body.append(toolbar);
 }
 
+function toggleUi() {
+	const toolbar = document.querySelector('.SieboldiiToolbar');
+	toolbar.toggleAttribute('hidden');
+}
+
+chrome.runtime.onMessage.addListener((request) => {
+	if (request.type === 'sieboldii-browser-action') {
+		toggleUi();
+	}
+});
+
 (function main() {
 	createUi();
 })();
