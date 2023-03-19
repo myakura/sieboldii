@@ -43,6 +43,8 @@ body {
 	transition-timing-function: ease-out;
 	transition-property: color, background-color, border-color;
 	will-change: color, background-color, border-color;
+
+	outline-offset: var(--size-1);
 }
 
 .SieboldiiToolbar button:hover {
